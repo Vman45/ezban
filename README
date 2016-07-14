@@ -21,6 +21,11 @@ I should be writing tests, but I haven't yet.
 Usage: Addresses are entered into the database as an IP or STARTIP-STOPIP range, then output in a list when requested. 
 Formats may be added as you can write an SQL query to describe what you want and a bit of PHP to . it together.
 
+/list.php	-	lists StartIP of all records, one IP per line, End IP is ignored
+/p2p.php	-	unvalidated p2p format based off of Description:StartIP-EndIP\n format
+
+TODO: Actually expire IP addresses
+
 Features:
 * Ban a single address or range
 * Set an expiration date where appropriate/desired (Default is Yes)
