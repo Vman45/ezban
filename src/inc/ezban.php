@@ -32,3 +32,18 @@ function show_banlist() {
 	}
 
 }
+
+function show_p2p_banlist() {
+	$mycon = condb();
+	if($mycon) { #returns false if failed
+		$stmt = $mycon->prepare('SELECT StartIP,EndIP,Description FROM banranges;');
+		$stmt->execute();
+		while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
+			echo($result['Description'].':'.$result['StartIP'].'-'.$result['EndIP']);
+			print("\n");
+		}
+	} else { # oops, it failed to connect to the db for some reason...
+		echo "DB Connection Failed!\n";
+	}
+
+}
