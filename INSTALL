@@ -1,0 +1,5 @@
+Copy contents of src/ directory into web root.  
+Put config file somewhere accessable by PHP, but not http.
+Run createdb.sql script with something like:
+$mysql -u root -p < createdb.sql
+Create 1st user... TODO: figure out how
