@@ -13,7 +13,7 @@ echo "Adding [$username] with password [$passwd]<br \>\n";
 	if($mycon) { # returns false if it failed
 		$stmt = $mycon->prepare('INSERT INTO user (username,passwd,disabled) VALUES (:username,:passwd,0);');
 		$stmt->bindParam(':username',$username);
-		$stmt->bindParam(':passwd',$passwd);
+		$stmt->bindParam(':passwd',password_hash($passwd,PASSWORD_DEFAULT));
 		$stmt->execute();
 	} else { # it failed... cope
 		echo "FAIL... meh<br />\n";

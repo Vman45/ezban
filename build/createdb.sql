@@ -6,8 +6,8 @@ id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(16) NOT NULL UNIQUE,
 disabled BIT(1) NOT NULL, 
 created TIMESTAMP,
-passwd VARCHAR(50),
-api_key VARCHAR(50),
+passwd VARCHAR(60),
+api_key VARCHAR(60),
 last_login TIMESTAMP
 ) ENGINE=INNODB;
 
