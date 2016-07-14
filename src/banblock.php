@@ -26,7 +26,9 @@ if (isset($_POST['submitted'])) {
 <BODY>
 <form method="POST">
 Ban IP Block:<br /><hr />
-NOTE: These will not be included in the "single addr per line" formated banlists, but is here to support development of p2p formatted banlists later<br />
+NOTE: These will not be included in the "single addr per line" formated banlists as an extrapolated range<br />
+Rather, only the StartIP will be listed.<br />
+/p2p.php will display the list in p2p format.
 <br /><hr />
 StartIP: <input type="text" name="StartIP">&nbsp;EndIP: <input type="text" name="EndIP"><br />
 Description/Reason: <input type="text" name="Description" size=255><br />
